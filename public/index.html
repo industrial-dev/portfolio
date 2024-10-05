@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
 			property="og:description"
 			content="Recopilación de titulaciones, certificaciones, experiencia laboral y proyectos de un Desarrollador de Software e Ingeniero Industrial."
 		/>
-		<meta property="og:image" content="/src/perfil_image.jpg" />
+		<meta property="og:image" content="/src/perfil_image" />
 		<meta property="og:image:alt" content="Imagen de perfil de Daniel Núñez" />
 		<!-- TODO: ...Hay más etiquetas... -->
 
@@ -24,7 +24,7 @@
 		<meta name="theme-color" content="#2C6E49" />
 
 		<!-- Icono de la pestaña -->
-		<link rel="icon" type="image/png" href="./perfil_image.jpg" />
+		<link rel="icon" type="image/png" href="/src/perfil_image.jpg" />
 
 		<!-- TODO: Cuando traduzca la WEB -->
 		<!-- <link rel="alternate" href="https://urlprueba.dev/en" hreflang="en-GB " /> -->
@@ -34,169 +34,332 @@
 		<title>Portfolio de industrial-dev</title>
 
 		<!-- Estilos -->
-		<link rel="stylesheet" href="build/styles.css" />
-		
+		<link rel="stylesheet" href="/public/build/tailwind.css" />
 	</head>
 
-	<body>
-		<header>
-			<nav>
-				<a href="#inicio" aria-label="inicio">Inicio</a>
-				<a href="#experiencia" aria-label="experiencia">Experiencia</a>
-				<a href="#educacion" aria-label="educacion">Educación</a>
-				<a href="#certificaciones" aria-label="certificaciones">Certificaciones</a>
-				<a href="#proyectos" aria-label="proyectos">Proyectos</a>
-				<a href="#idioma" aria-label="idioma">
-					<img src="./favicons/globe.svg" alt="Icono de idioma" />
+	<body class="relative text-black dark:text-white">
+		<div
+			class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		></div>
+		<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+			<nav
+				class="flex bg-gray-50 px-3 text-sm font-medium rounded-full text-gray-600 dark:text-black justify-center items-center"
+			>
+				<a
+					class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500 text-blue-500"
+					href="#inicio"
+					aria-label="inicio"
+					>Inicio</a
+				>
+				<a
+					class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+					href="#experiencia"
+					aria-label="experiencia"
+					>Experiencia</a
+				>
+				<a
+					class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+					href="#educacion"
+					aria-label="educacion"
+					>Educación</a
+				>
+				<a
+					class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+					href="#certificaciones"
+					aria-label="certificaciones"
+					>Certificaciones</a
+				>
+				<a
+					class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+					href="#proyectos"
+					aria-label="proyectos"
+					>Proyectos</a
+				>
+				<a
+					class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+					href="#idioma"
+					aria-label="idioma"
+				>
+					<!-- <img class="hover:" src="/src/favicons/globe.svg" alt="Icono de idioma" /> -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="feather feather-globe"
+					>
+						<circle cx="12" cy="12" r="10"></circle>
+						<line x1="2" y1="12" x2="22" y2="12"></line>
+						<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+					</svg>
 				</a>
 			</nav>
 		</header>
-		<main>
-			<section>
-				<div>
-					<img src="./perfil_image.jpg" width="50px" height="50px" />
-					<small>Explorando oportunidades</small>
+		<main class="px-4">
+			<section class="py-16 scroll-m-20 mx-auto container lg:max-w-4xl md:w-2xl">
+				<div class="flex flex-wrap items-center gap-4">
+					<img class="rounded-full shadow-lg size-16" src="/src/perfil_image.jpg" />
+					<div class="flex items-center">
+						<span class="relative inline-flex overflow-hidden rounded-full p-[1px]">
+							<span
+								class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"
+							></span>
+							<small
+								class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+								>Explorando oportunidades</small
+							>
+						</span>
+					</div>
 				</div>
-				<h1>¡Hola! Soy Daniel</h1>
-				<p>
+				<h1 class="text-4xl font-bold tracking-tight text-gray-800 dark:text-white md:text-5xl">¡Hola! Soy Daniel</h1>
+				<p
+					class="mt-6 text-xl text-gray-800 dark:text-gray-300 dark:[&>strong]:text-yellow-200 dark:[&>strong]:font-bold"
+				>
 					➕ 3 años de experiencia. <strong>Desarrollador de Software</strong> e <strong> Ingeniero Industrial</strong>.
 					Especializado en tecnologías <strong>Microsoft</strong>.
 				</p>
-				<nav>
-					<a href="mailto:danigevorkian@gmail.com" target="_blank" rel="noopener noreferrer">
-						<img class="icon" width="24px" height="24px;" src="./favicons/phone-call.svg" alt="Icono de teléfono" />
+				<nav class="flex flex-wrap gap-4 mt-6">
+					<a
+						class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-black group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+						href="mailto:danigevorkian@gmail.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="feather feather-mail"
+						>
+							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+							<polyline points="22,6 12,13 2,6"></polyline>
+						</svg>
 						Correo electrónico
 					</a>
-					<a href="tel:+34633217517" target="_blank" rel="noopener noreferrer">
-						<img class="icon" src="./favicons/phone-call.svg" alt="Icono de WhatsApp" />
+					<a
+						class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-black group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+						href="tel:+34633217517"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+							></path>
+						</svg>
 						Llámame
 					</a>
-					<a href="https://wa.me/3463433217517" target="_blank" rel="noopener noreferrer">
-						<img class="icon" src="./favicons/whatsapp.svg" alt="Icono de WhatsApp" />
+					<a
+						class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-black group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+						href="https://wa.me/3463433217517"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<?xml version="1.0"?><svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							width="24"
+							height="24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
+							/>
+						</svg>
 						WhatsApp
 					</a>
 					<a
+						class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 hover:text-white dark:hover:bg-gray-100 dark:hover:border-gray-300 dark:hover:text-black group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
 						href="https://www.linkedin.com/in/danielnunezgevorkian/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="./favicons/linkedin.svg" alt="Icono de GitHub" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+							<rect x="2" y="9" width="4" height="12"></rect>
+							<circle cx="4" cy="4" r="2"></circle>
+						</svg>
 						LinkedIn
 					</a>
 				</nav>
 			</section>
-			<section>
-				<h2><img src="./favicons/work.svg" /> Experiencia Laboral</h2>
-				<ol>
-					<li>
-						<article>
-							<div>
-								<span>·</span>
-								<h3>Puesto de trabajo</h3>
-								<h4>Empresa</h4>
-								<time>Mes Año - Mes Año</time>
-							</div>
-							<div>
-								<p>Descripción</p>
-							</div>
-							<aside>¿Info adicional?</aside>
-						</article>
-					</li>
-					<li>
-						<article>
-							<div>
-								<span>·</span>
-								<h3>Puesto de trabajo</h3>
-								<h4>Empresa</h4>
-								<time>Mes Año - Mes Año</time>
-							</div>
-							<div>
-								<p>Descripción</p>
-							</div>
-							<aside>¿Info adicional?</aside>
-						</article>
-					</li>
-				</ol>
-			</section>
+
+			<div class="space-y-24">
+				<section
+					id="experiencia"
+					class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+				>
+					<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white undefined">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="feather feather-briefcase"
+						>
+							<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+							<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+						</svg>
+						Experiencia Laboral
+					</h2>
+					<ol class="relative mt-16">
+						<li>
+							<article
+								class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+							>
+								<div class="relative pb-12 md:col-span-2">
+									<div class="sticky-top">
+										<span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl">•</span>
+										<h3 class="text-xl font-bold text-yellow-400">Puesto de trabajo</h3>
+										<h4 class="font-semibold text-xl text-gray-600 dark:text-white">Empresa</h4>
+										<time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">Mes Año - Mes Año</time>
+									</div>
+								</div>
+								<div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+									<p>Descripción</p>
+									<aside
+										class="inline-flex items-center text-lg font-medium text-yellow-500 dark:text-yellow-200 dark:hover:text-yellow-300 hover:text-yellow-700"
+									>
+										¿Info adicional?
+									</aside>
+								</div>
+							</article>
+						</li>
+						<li>
+							<article
+								class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+							>
+								<div class="relative pb-12 md:col-span-2">
+									<div class="sticky-top">
+										<span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl">•</span>
+										<h3 class="text-xl font-bold text-yellow-400">Puesto de trabajo</h3>
+										<h4 class="font-semibold text-xl text-gray-600 dark:text-white">Empresa</h4>
+										<time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">Mes Año - Mes Año</time>
+									</div>
+								</div>
+								<div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+									<p>Descripción</p>
+									<aside
+										class="inline-flex items-center text-lg font-medium text-yellow-500 dark:text-yellow-200 dark:hover:text-yellow-300 hover:text-yellow-700"
+									>
+										¿Info adicional?
+									</aside>
+								</div>
+							</article>
+						</li>
+					</ol>
+				</section>
+			</div>
 		</main>
 		<footer></footer>
-
 		<!-- Global CSS -->
 		<style is:global>
 			:root {
-			  color-scheme: light dark;
+				color-scheme: light dark;
 			}
-	  
+
 			html {
-			  font-family: "Onest Variable", system-ui, sans-serif;
-			  scroll-behavior: smooth;
+				font-family: "Onest Variable", system-ui, sans-serif;
+				scroll-behavior: smooth;
 			}
-	  
+
 			body {
-			  color: rgba(17, 17, 17, 0.9);
-			  display: flex;
-			  flex-direction: column;
-			  min-height: 100vh;
-			  overscroll-behavior: none;
-			}
-	  
-			@media (prefers-reduced-motion: reduce) {
-			  html {
-				scroll-behavior: auto;
-			  }
-			}
-	  
-			@media (prefers-color-scheme: dark) {
-			  body {
-				color: rgba(255, 255, 255, 0.9);
-			  }
-			}
-	  
-			#header-nav {
-			  animation: blur linear both 0.5s;
-			  animation-timeline: scroll();
-			  animation-range: 0 500px;
-			}
-	  
-			@keyframes blur {
-			  to {
-				backdrop-filter: blur(20px);
-				border-width: 1px;
-				border-color: rgba(0, 0, 0);
-				padding: 0.25rem 0.75rem;
+				color: rgba(17, 17, 17, 0.9);
 				display: flex;
-				flex-direction: row;
-				align-items: center;
-				background-color: rgb(229, 229, 229);
-				border-radius: 9999px;
-			  }
+				flex-direction: column;
+				min-height: 100vh;
+				overscroll-behavior: none;
 			}
-	  
+
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+			}
+
 			@media (prefers-color-scheme: dark) {
-			  @keyframes blur {
-				from {
-				  border: 0px;
+				body {
+					color: rgba(255, 255, 255, 0.9);
 				}
-				to {
-				  box-shadow:
-					0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-					0px 0px 0 1px rgba(0, 0, 0, 0.3);
-				  background: rgba(0, 0, 0, 0.3);
-				  backdrop-filter: blur(20px);
-				  border-width: 1px;
-				  border-color: rgba(0, 0, 0);
-				  padding-left: 0.75rem;
-				  padding-right: 0.75rem;
-				  padding-top: 0.25rem;
-				  padding-bottom: 0.25rem;
-				  display: flex;
-				  flex-direction: row;
-				  align-items: center;
-				  background-color: rgba(0, 0, 0, 0.3);
-				  border-radius: 9999px;
-				}
-			  }
 			}
-		  </style>
+
+			@keyframes blur {
+				to {
+					backdrop-filter: blur(20px);
+					border-width: 1px;
+					border-color: rgba(0, 0, 0);
+					padding: 0.25rem 0.75rem;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					background-color: rgb(229, 229, 229);
+					border-radius: 9999px;
+				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				@keyframes blur {
+					from {
+						border: 0px;
+					}
+					to {
+						box-shadow: 0px 5px 50px -5px rgba(0, 0, 0, 0.1), 0px 0px 0 1px rgba(0, 0, 0, 0.3);
+						background: rgba(0, 0, 0, 0.3);
+						backdrop-filter: blur(20px);
+						border-width: 1px;
+						border-color: rgba(0, 0, 0);
+						padding-left: 0.75rem;
+						padding-right: 0.75rem;
+						padding-top: 0.25rem;
+						padding-bottom: 0.25rem;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						background-color: rgba(0, 0, 0, 0.3);
+						border-radius: 9999px;
+					}
+				}
+			}
+		</style>
 	</body>
 </html>
