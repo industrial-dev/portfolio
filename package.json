@@ -5,6 +5,7 @@
     "tailwindcss": "^3.4.13"
   },
   "scripts": {
-    "dev": "tailwindcss -i ./src/tailwind.css -o ./public/build/tailwind.css --watch"
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./public/build/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/tailwind.css -o ./public/build/tailwind.css"
   }
 }
